@@ -1,0 +1,19 @@
+.r1{
+    background-color:rgb(120, 120, 245);
+    color: white;
+}
+
+span{
+    visibility: hidden;
+}
+
+i:hover  span{
+
+    visibility: visible;
+}
+.r2{
+    background-image: url(src\assets\flight.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 920px;
+}
