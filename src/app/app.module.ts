@@ -7,6 +7,11 @@ import { MainHomepageComponent } from './main-homepage/main-homepage.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { UserRegComponent } from './user-reg/user-reg.component';
 import { AdminHomepageComponent } from './admin-homepage/admin-homepage.component';
+import { ManagerAddflightsComponent } from './manager-addflights/manager-addflights.component';
+import { ViewFlightsComponent } from './view-flights/view-flights.component';
+import { ManagerViewregComponent } from './manager-viewreg/manager-viewreg.component';
+import { ManagerViewuserComponent } from './manager-viewuser/manager-viewuser.component';
+import { ManagerViewcancelregComponent } from './manager-viewcancelreg/manager-viewcancelreg.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +19,12 @@ import { AdminHomepageComponent } from './admin-homepage/admin-homepage.componen
     MainHomepageComponent,
     AdminLoginComponent,
     UserRegComponent,
-    AdminHomepageComponent
+    AdminHomepageComponent,
+    ManagerAddflightsComponent,
+    ViewFlightsComponent,
+    ManagerViewregComponent,
+    ManagerViewuserComponent,
+    ManagerViewcancelregComponent
   ],
   imports: [
     BrowserModule,
