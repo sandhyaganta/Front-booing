@@ -1,0 +1,15 @@
+.r1{
+    background-color:rgb(120, 120, 245);
+    color: white;
+}
+/* #b1:hover  {
+    visibility: hidden;
+} */
+span{
+    visibility: hidden;
+}
+
+i:hover  span{
+
+    visibility: visible;
+}
