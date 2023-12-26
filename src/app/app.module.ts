@@ -12,6 +12,7 @@ import { ViewFlightsComponent } from './view-flights/view-flights.component';
 import { ManagerViewregComponent } from './manager-viewreg/manager-viewreg.component';
 import { ManagerViewuserComponent } from './manager-viewuser/manager-viewuser.component';
 import { ManagerViewcancelregComponent } from './manager-viewcancelreg/manager-viewcancelreg.component';
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ManagerViewcancelregComponent } from './manager-viewcancelreg/manager-v
     ViewFlightsComponent,
     ManagerViewregComponent,
     ManagerViewuserComponent,
-    ManagerViewcancelregComponent
+    ManagerViewcancelregComponent,
+    UserRegistrationComponent
   ],
   imports: [
     BrowserModule,
