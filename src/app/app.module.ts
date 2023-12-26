@@ -14,6 +14,7 @@ import { ManagerViewuserComponent } from './manager-viewuser/manager-viewuser.co
 import { ManagerViewcancelregComponent } from './manager-viewcancelreg/manager-viewcancelreg.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { UserMainComponent } from './user-main/user-main.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { UserLoginComponent } from './user-login/user-login.component';
     ManagerViewuserComponent,
     ManagerViewcancelregComponent,
     UserRegistrationComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    UserMainComponent
   ],
   imports: [
     BrowserModule,

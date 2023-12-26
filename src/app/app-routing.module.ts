@@ -11,6 +11,7 @@ import { ManagerViewuserComponent } from './manager-viewuser/manager-viewuser.co
 import { ManagerViewcancelregComponent } from './manager-viewcancelreg/manager-viewcancelreg.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { UserMainComponent } from './user-main/user-main.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'main-homepage',pathMatch:'full'},
@@ -23,7 +24,9 @@ const routes: Routes = [
   {path:'view1',component:ManagerViewregComponent},
   {path:'view2',component:ManagerViewuserComponent},
   {path:'view3',component:ManagerViewcancelregComponent},
-  {path:'user1',component:UserLoginComponent}
+  {path:'user1',component:UserLoginComponent},
+  {path:'user2',component:UserMainComponent},
+  {path:'user3',component:UserRegistrationComponent}
   
   
   
