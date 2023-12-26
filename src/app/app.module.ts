@@ -13,6 +13,7 @@ import { ManagerViewregComponent } from './manager-viewreg/manager-viewreg.compo
 import { ManagerViewuserComponent } from './manager-viewuser/manager-viewuser.component';
 import { ManagerViewcancelregComponent } from './manager-viewcancelreg/manager-viewcancelreg.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UserRegistrationComponent } from './user-registration/user-registration
     ManagerViewregComponent,
     ManagerViewuserComponent,
     ManagerViewcancelregComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,

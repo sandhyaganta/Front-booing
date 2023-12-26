@@ -10,6 +10,7 @@ import { ManagerViewregComponent } from './manager-viewreg/manager-viewreg.compo
 import { ManagerViewuserComponent } from './manager-viewuser/manager-viewuser.component';
 import { ManagerViewcancelregComponent } from './manager-viewcancelreg/manager-viewcancelreg.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'main-homepage',pathMatch:'full'},
@@ -21,7 +22,9 @@ const routes: Routes = [
   {path:"view",component:ViewFlightsComponent},
   {path:'view1',component:ManagerViewregComponent},
   {path:'view2',component:ManagerViewuserComponent},
-  {path:'view3',component:ManagerViewcancelregComponent}
+  {path:'view3',component:ManagerViewcancelregComponent},
+  {path:'user1',component:UserLoginComponent}
+  
   
   
 ];

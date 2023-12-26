@@ -1,7 +1,16 @@
 .r1{
-    background-color:rgb(120, 120, 245);
+    background-color:rgb(139,131,177);
+    color: white;
+    width: 100px;
+}
+.head{
+    color: purple;
+}
+.lb{
+    background-color: rgb(139,131,177);
     color: white;
 }
+
 
 span{
     visibility: hidden;
