@@ -15,6 +15,14 @@ import { ManagerViewcancelregComponent } from './manager-viewcancelreg/manager-v
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserMainComponent } from './user-main/user-main.component';
+import { UserViewprofileComponent } from './user-viewprofile/user-viewprofile.component';
+import { UserBookflightComponent } from './user-bookflight/user-bookflight.component';
+import { UserViewflightComponent } from './user-viewflight/user-viewflight.component';
+import { UserViewbookingComponent } from './user-viewbooking/user-viewbooking.component';
+import { UserPaymentsComponent } from './user-payments/user-payments.component';
+import { SearchflightsComponent } from './searchflights/searchflights.component';
+import { UserCancelregComponent } from './user-cancelreg/user-cancelreg.component';
+import { UserChangepasswordComponent } from './user-changepassword/user-changepassword.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +38,15 @@ import { UserMainComponent } from './user-main/user-main.component';
     ManagerViewcancelregComponent,
     UserRegistrationComponent,
     UserLoginComponent,
-    UserMainComponent
+    UserMainComponent,
+    UserViewprofileComponent,
+    UserBookflightComponent,
+    UserViewflightComponent,
+    UserViewbookingComponent,
+    UserPaymentsComponent,
+    SearchflightsComponent,
+    UserCancelregComponent,
+    UserChangepasswordComponent
   ],
   imports: [
     BrowserModule,
