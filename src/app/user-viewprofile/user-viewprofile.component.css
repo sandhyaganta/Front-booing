@@ -17,12 +17,7 @@ i:hover  span{
 
     visibility: visible;
 }
-.r2{
-    background-image: url(src\assets\flight.avif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 920px;
-}
+
 .label{
     color: purple;
     font-size: 23px;

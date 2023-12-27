@@ -20,9 +20,7 @@ i:hover  span{
 
     visibility: visible;
 }
-.r2{
-    background-image: url(src\assets\flight.avif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 920px;
+.car{
+    
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
