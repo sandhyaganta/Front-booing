@@ -1,0 +1,29 @@
+.r1{
+  background-color:rgb(139, 131, 177);
+  color: white;
+  width: 100%;
+  
+}
+.hh{
+  color:purple ;
+  
+}
+
+span{
+  visibility: hidden;
+}
+
+i:hover  span{
+
+  visibility: visible;
+}
+
+.car{
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.but{
+  background-color: rgb(139, 131, 177);
+  color: white;
+}
+
+  
