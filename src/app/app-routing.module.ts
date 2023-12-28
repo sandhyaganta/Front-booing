@@ -26,16 +26,18 @@ const routes: Routes = [
   {path:'main-homepage',component:MainHomepageComponent},
   {path:'admin',component:AdminLoginComponent},
   {path:'user',component:UserRegistrationComponent},
-  {path:'admin1',component:AdminHomepageComponent},
-  {path:'maneger',component:ManagerAddflightsComponent },
-  {path:"view",component:ViewFlightsComponent},
+  {path:'admin1',component:AdminHomepageComponent,children:[ 
+    {path:'maneger',component:ManagerAddflightsComponent },
+    {path:"view",component:ViewFlightsComponent},
   {path:'view1',component:ManagerViewregComponent},
   {path:'view2',component:ManagerViewuserComponent},
   {path:'view3',component:ManagerViewcancelregComponent},
+] },
+ 
+  
   {path:'user1',component:UserLoginComponent},
-  {path:'user2',component:UserMainComponent},
-  {path:'user3',component:UserRegistrationComponent},
-  {path:'user4',component:UserViewprofileComponent},
+  {path:'user2',component:UserMainComponent,children:[
+    {path:'user4',component:UserViewprofileComponent},
   {path:'user5',component:UserBookflightComponent},
   {path:'user6',component:UserViewflightComponent},
   {path:'user7',component:UserViewbookingComponent},
@@ -44,6 +46,9 @@ const routes: Routes = [
   {path:'search',component:SearchflightsComponent},
   {path:'user10',component:UserCancelregComponent},
   {path:'user11',component:UserChangepasswordComponent}
+  
+  ]},
+  {path:'user3',component:UserRegistrationComponent}
   
   
   

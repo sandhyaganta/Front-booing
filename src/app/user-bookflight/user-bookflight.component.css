@@ -9,14 +9,7 @@
     
 }
 
-span{
-    visibility: hidden;
-}
 
-i:hover  span{
-
-    visibility: visible;
-}
 .r2{
     
     background-repeat: no-repeat;

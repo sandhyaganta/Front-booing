@@ -7,14 +7,14 @@ head{
     color: purple;
 }
 
-span{
+/* span{
     visibility: hidden;
 }
 
 i:hover  span{
 
     visibility: visible;
-}
+} */
 /* .r2{
     background-image: url(src\assets\flight.avif);
     background-repeat: no-repeat;

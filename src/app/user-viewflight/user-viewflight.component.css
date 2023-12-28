@@ -9,11 +9,4 @@
     
 }
 
-span{
-    visibility: hidden;
-}
 
-i:hover  span{
-
-    visibility: visible;
-}
