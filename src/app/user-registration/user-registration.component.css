@@ -6,6 +6,13 @@
 .head{
   color: purple;
 }
+.p1{
+  font-size: 20px;
+}
+.sp1{
+  font-size: 20px;
+  color: rgb(139,131,177);
+}
 .sb{
   background-color: rgb(139,131,177);
   color: white;
