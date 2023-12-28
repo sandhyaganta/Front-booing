@@ -1,22 +1,49 @@
 <div class="container-fluid">
-    <h3 class="hh text-center">Search Flights</h3>
-    <div class="row">
-        <div class="col-4 sm "></div>
-        <div class="col-4 sm ">
-            <div class="card car mt-5">
-                <div class="card-body">
-                   <label class="label">Source:</label>
-                   <input class="form-control p-3" type="text" placeholder="" aria-label="default input example"><br /><br />
-                   <label class="label">Destination:</label>
-                   <input class="form-control p-3" type="text" placeholder="" aria-label="default input example"><br /><br />
-                   <button class="btn b1 m-auto" type="submit">search</button>
-
+  <h3 class="hh text-center">Search Flights</h3>
+  <div class="row">
+    <div class="col-8 sm m-auto">
+      <div class="card car mt-3">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <img
+                class="im"
+                height="450"
+                width="100%"
+                src="\assets\airplane.jpeg"
+              />
+            </div>
+            <div class="col-6">
+              <Form>
+                <div class="form-floating mt-5">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="Username"
+                    placeholder="Username"
+                  />
+                  <label for="code4">Source</label>
                 </div>
-              </div>
+                <br />
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="Bookid"
+                    placeholder="Bookid"
+                  />
+                  <label for="code4">Destination</label>
+                </div>
+                <div class="text-center mt-5">
+                  <button class="btn text-center but" type="submit">
+                    Search
+                  </button>
+                </div>
+              </Form>
+            </div>
+          </div>
         </div>
-        <div class="col-3 sm "></div>
-        <div class="col-1 mt-3 ">
-            
-        </div>
+      </div>
     </div>
   </div>
+</div>

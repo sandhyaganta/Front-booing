@@ -1,42 +1,46 @@
-<div class="container-fluid  ">
-    
-    <h1 class="text-center head pt-5">Air Ticket Automation</h1>
 
-<div class="row ">
-    <div class="col-3"></div>
-   
-    <div class="col-5 ">
-        <h2 class="text-center head mt-3">Login</h2>
-        
-        
-        <div class="card car mt-5">
-            <div class="card-body">
-                <div class="row mt-5">
-                    <div class="col-6">
-                        <h4 class="head">Username:</h4>
-                        <h4 class="mt-5 head">Password:</h4>
-                    </div>
-                    <div class="col-6">
-                        <input type="text" class=" form-control p-3" name="username" placeholder="enter your name"><br><br>
-                        <input type="password" class=" form-control p-3" name="password" placeholder=" enter your password"><br><br>
-                        <button type="button" class="btn lb" routerLink="/user2">Login</button>
-                        <p class="p1 mt-2">New User????<span  class="sp2"  routerLink="/user3">Registration here</span></p>
-                    </div>
-                   
-                </div>
-        
-              
+
+<div class="container-fluid">
+     
+    <h1 class="text-center head pt-5">Air Ticket Automation</h1>
+    <div class="row">
+      <div class="col-sm-8 m-auto">
+        <div class="card mt-5 car rounded">
+          
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6">
+                <img
+                    class="im"
+                    height="450"
+                    width="100%"
+                    src="\assets\user.jpeg"
+                  />
+              </div>
+              <div class="col-6">
+                <h4 class="head">Username:</h4>
+                  <br />
+  
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                  </div><br />
+                  <h4 class="mt-5 head">Password:</h4>
+                  <br />
+                  <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                  </div><br /><br />
+                  
+                  <div class="text-center">
+                    <button class="btn lb" type="submit" routerLink="/user2">Login</button>
+                    <p class="p1 mt-2">New User????<span  class="sp2"  routerLink="/user">Registration here</span></p>
+                  </div>
+                
+              </div>
             </div>
           </div>
-
-        
-            </div>
-<div class=" col-4 text-end mt-3">
-    
-
-</div>
-</div>
-
-
-
-</div>
+        </div>
+      </div>
+    </div>
+  </div>

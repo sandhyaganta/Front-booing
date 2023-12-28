@@ -1,17 +1,15 @@
 .r1{
-    background-color:rgb(139,131,177);
-    color: white;
+    background-color:rgb(134, 203, 243);
+    color:black;
     width: 100%;
 }
 .head{
-    color: purple;
+    color:white;
 }
 
-span{
-    visibility: hidden;
-}
-
-i:hover  span{
-
-    visibility: visible;
+.bimage{
+    background-image: url(src\assets\fli.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 920px;
 }

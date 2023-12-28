@@ -1,14 +1,18 @@
 .r1{
-    background-color:rgb(139, 131, 177);
+    background-color:black;
     color: white;
-    width: 100%;
+    width: 80%;
     
 }
 .head{
-    color:purple ;
+    color:white ;
     
 }
-
+.bi{
+    float: left;
+    font-size: 18px;
+    
+}
 span{
     visibility: hidden;
 }
@@ -16,4 +20,13 @@ span{
 i:hover  span{
 
     visibility: visible;
+}
+
+.con{
+    background-color: rgb(24, 21, 21) ;
+    height: 920px;
+}
+.col{
+    background-color: white;
+    height: 750px;
 }

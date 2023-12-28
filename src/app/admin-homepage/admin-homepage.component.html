@@ -1,14 +1,18 @@
-<div class="container-fluid  ">
+<div class="container-fluid con p-2 ">
     
         <h1 class="text-center head pt-5">Air Ticket Automation</h1>
+        
 
     <div class="row ">
-        <div class="col-11 mt-3">
+       
+        
+        <div class="col-10 mt-3  col">
             <router-outlet></router-outlet>
         </div>
-    <div class="col-1 mt-3">
+    <div class="col-2 mt-3 text-end">
+        <img class="rounded-circle " src="\assets\dash.jpeg">       
         <button class="btn r1 " id="b1" type="submit"><i class="bi bi-house" ><span>home</span></i></button><br><br>
-        <button class="btn r1 " type="submit" routerLink="maneger"><i class="bi bi-airplane-fill"><span>add flight</span></i></button><br><br>
+        <button class="btn r1 " type="submit" routerLink="maneger"><i class="bi bi-airplane-fill text-start"><span>add flight</span></i></button><br><br>
         <button class="btn  r1" type="submit" routerLink="view" ><i class="bi bi-hexagon"><span>view flights</span></i></button><br><br>
         <button class="btn r1 " type="submit" routerLink="view1"><i class="bi bi-hexagon"><span>manger view reservation</span></i></button><br><br>
         <button class="btn r1 " type="submit" routerLink="view2"><i class="bi bi-person-fill"><span>manger view user</span></i></button><br><br>
