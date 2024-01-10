@@ -1,38 +1,250 @@
-<div class="container-fluid  ">
-    
-        <h3 class="text-center head pt-5">View Flights  Details</h3>
-    
-    <div class="row ">
-        <div class="col-12">
-            <table class="table table-striped">
-                
-                    <thead>
-                      <tr>
-                        <th scope="col">S.no</th>
-                        <th scope="col">Flightnumber</th>
-                        <th scope="col">Flightname</th>
-                        <th scope="col">Arrivaldate</th>
-                        <th scope="col">Arrivaltime</th>
-                        <th scope="col">Depaturedate</th>
-                        <th scope="col">Depaturetime</th>
-                        <th scope="col">Seats</th>
-                        <th scope="col">Amount</th>
-                        <th scope="col">Source</th>
-                        <th scope="col">Destination</th>
-                        <th scope="col">Action</th>
-                        
-                      </tr>
-                    </thead>
-                    <tbody>
-                      
-                    </tbody>
-                  
-              </table>
+<div class="container-fluid">
+  <h3 class="text-center head pt-5">View Flights Details</h3>
+
+  <div class="row">
+    <div class="col-12">
+      <div *ngFor="let r of flights">
+        <div class="card rounded car">
+          <div class="card-body">
+            <div class="container fw-bold">
+              <div class="row">
+                <div class="col-5">
+                  <p>
+                    id:<span class="text-black">{{ r._id }}</span>
+                  </p>
+                  <p>
+                    flightnumber:<span class="text-black">{{
+                      r.flightnumber
+                    }}</span>
+                  </p>
+                  <p>
+                    flightname:<span class="text-black">{{
+                      r.flightname
+                    }}</span>
+                  </p>
+                  <p>
+                    arrivaldate:<span class="text-black">{{
+                      r.arrivaldate
+                    }}</span>
+                  </p>
+                  <p>
+                    arrivaltime:<span class="text-black">{{
+                      r.arrivaltime
+                    }}</span>
+                  </p>
+                  <p>
+                    depaturedate:<span class="text-black">{{
+                      r.depaturedate
+                    }}</span>
+                  </p>
+                </div>
+                <div class="col-5">
+                  <p>
+                    depaturetime:<span class="text-black">{{
+                      r.depaturetime
+                    }}</span>
+                  </p>
+                  <p>
+                    seats:<span class="text-black">{{ r.seats }}</span>
+                  </p>
+                  <p>
+                    amount:<span class="text-black">{{ r.amount }}</span>
+                  </p>
+                  <p>
+                    source:<span class="text-black">{{ r.source }}</span>
+                  </p>
+                  <p>
+                    destination:<span class="text-black">{{
+                      r.destination
+                    }}</span>
+                  </p>
+                </div>
+                <div class="col-2">
+                  <button
+                    type="button"
+                    class="btn"
+                    (click)="deleteflight(r._id)"
+                  >
+                    <i class="bi bi-trash3-fill text-danger icon"></i></button
+                  ><br />
+
+                  <!-- Button trigger modal -->
+                  <button
+                    type="button"
+                    class="btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    (click)="flightedit(r)"
+                  >
+                    <i class="bi bi-pencil-square text-success icon"></i>
+                  </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Flight Details Update
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <form [formGroup]="updateForm">
+                            <div class="row">
+                              <div class="col-6">
+                                <label
+                                  >Flight Number:<span
+                                    ><input
+                                      type="text"
+                                      class="form-control"
+                                      width="50"
+                                      aria-label="Sizing example input"
+                                      aria-describedby="inputGroup-sizing-lg"
+                                      formControlName="flightnumber"
+                                    /> </span
+                                ></label>
+                                <label
+                                  >Flight Name:<span
+                                    ><input
+                                      type="text"
+                                      class="form-control"
+                                      width="50"
+                                      aria-label="Sizing example input"
+                                      aria-describedby="inputGroup-sizing-lg"
+                                      formControlName="flightname"
+                                    /> </span
+                                ></label>
+                                <label
+                                  >Arrival Date:<span
+                                    ><input
+                                      type="text"
+                                      class="form-control"
+                                      width="50"
+                                      aria-label="Sizing example input"
+                                      aria-describedby="inputGroup-sizing-lg"
+                                      formControlName="arrivaldate"
+                                    /> </span
+                                ></label>
+                                <label
+                                  >Arrival Time:<span
+                                    ><input
+                                      type="text"
+                                      class="form-control"
+                                      width="50"
+                                      aria-label="Sizing example input"
+                                      aria-describedby="inputGroup-sizing-lg"
+                                      formControlName="arrivaltime"
+                                    /> </span
+                                ></label>
+                                <label
+                                  >Depature Date:<span
+                                    ><input
+                                      type="text"
+                                      class="form-control"
+                                      width="50"
+                                      aria-label="Sizing example input"
+                                      aria-describedby="inputGroup-sizing-lg"
+                                      formControlName="depaturedate"
+                                    /> </span
+                                ></label>
+                              </div>
+                              <div class="col-6">
+                                <label
+                                  >Depature Time:<span
+                                    ><input
+                                      type="text"
+                                      class="form-control"
+                                      width="50"
+                                      aria-label="Sizing example input"
+                                      aria-describedby="inputGroup-sizing-lg"
+                                      formControlName="depaturetime"
+                                    /> </span
+                                ></label>
+                                <label
+                                  >Seats:<span
+                                    ><input
+                                      type="text"
+                                      class="form-control"
+                                      width="50"
+                                      aria-label="Sizing example input"
+                                      aria-describedby="inputGroup-sizing-lg"
+                                      formControlName="seats"
+                                    /> </span
+                                ></label>
+                                <label
+                                  >Amount:<span
+                                    ><input
+                                      type="text"
+                                      class="form-control"
+                                      width="50"
+                                      aria-label="Sizing example input"
+                                      aria-describedby="inputGroup-sizing-lg"
+                                      formControlName="amount"
+                                    /> </span
+                                ></label>
+                                <label
+                                  >Source:<span
+                                    ><input
+                                      type="text"
+                                      class="form-control"
+                                      width="50"
+                                      aria-label="Sizing example input"
+                                      aria-describedby="inputGroup-sizing-lg"
+                                      formControlName="source"
+                                    /> </span
+                                ></label>
+                                <label
+                                  >Destination:<span
+                                    ><input
+                                      type="text"
+                                      class="form-control"
+                                      width="50"
+                                      aria-label="Sizing example input"
+                                      aria-describedby="inputGroup-sizing-lg"
+                                      formControlName="destination"
+                                    /> </span
+                                ></label>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-primary"
+                            (click)="updated()"
+                          >
+                            Save changes
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    
+      </div>
     </div>
-
-
-
+  </div>
 </div>
-

@@ -2,7 +2,8 @@
 <div class="container-fluid">
   <h1 class="text-center head pt-5">Air Ticket Automation</h1>
   <div class="row">
-    <div class="col-sm-8 m-auto">
+    
+    <div class="col-sm-6 m-auto">
       <div class="card mt-5 car rounded">
         
         <div class="card-body">
@@ -16,28 +17,30 @@
                 />
             </div>
             <div class="col-6">
+              <form [formGroup]="Loginform">
               <h4 class="head">Username:</h4>
                 <br />
 
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+                  <input type="text" class="form-control" id="floatingPassword" placeholder="Password" formControlName="username">
                   <label for="floatingPassword">Password</label>
                 </div><br />
                 <h4 class="mt-5 head">Password:</h4>
                 <br />
                 <div class="form-floating">
-                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
                   <label for="floatingPassword">Password</label>
                 </div><br /><br />
                 
                 <div class="text-center">
-                  <button class="btn lb" type="submit" routerLink="/admin1">Login</button>
+                  <button class="btn lb" type="submit" width="100%" (click)="admin()">Login</button>
                 </div>
-              
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
   </div>
 </div>

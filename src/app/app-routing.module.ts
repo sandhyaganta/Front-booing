@@ -20,13 +20,17 @@ import { UserPaymentsComponent } from './user-payments/user-payments.component';
 import { SearchflightsComponent } from './searchflights/searchflights.component';
 import { UserCancelregComponent } from './user-cancelreg/user-cancelreg.component';
 import { UserChangepasswordComponent } from './user-changepassword/user-changepassword.component';
+import { AdminComponent } from './admin/admin.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'main-homepage',pathMatch:'full'},
+  {path:'', component:MainHomepageComponent},
   {path:'main-homepage',component:MainHomepageComponent},
   {path:'admin',component:AdminLoginComponent},
   {path:'user',component:UserRegistrationComponent},
   {path:'admin1',component:AdminHomepageComponent,children:[ 
+    {path:'', component:AdminComponent},
+    {path:'home', component:AdminComponent},
     {path:'maneger',component:ManagerAddflightsComponent },
     {path:"view",component:ViewFlightsComponent},
   {path:'view1',component:ManagerViewregComponent},
@@ -37,6 +41,8 @@ const routes: Routes = [
   
   {path:'user1',component:UserLoginComponent},
   {path:'user2',component:UserMainComponent,children:[
+    {path:'',component:HomeComponent},
+    {path:'home1',component:HomeComponent},
     {path:'user4',component:UserViewprofileComponent},
   {path:'user5',component:UserBookflightComponent},
   {path:'user6',component:UserViewflightComponent},

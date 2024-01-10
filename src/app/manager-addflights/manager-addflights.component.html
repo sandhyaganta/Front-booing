@@ -7,84 +7,98 @@
           
     
     <div class="row ">
+      <form [formGroup]="Flightform">
+        <div class="row">
         <div class="col-2"></div>
         <div class="col-2">
+         
             <div class="input-group">
-                <input type="number" required />
+                <input type="number" required  formControlName="flightnumber" >
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Flight Number</label>
               </div>
         
               <div class="input-group">
-                <input type="date" required />
+                <input type="date" required formControlName="depaturedate">
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Depature Date</label>
               </div>
+              
         </div>
         <div class="col-2">
+          
             <div class="input-group">
-                <input type="text" required />
+                <input type="text" required formControlName="flightname">
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Flight company</label>
               </div>
         
               <div class="input-group">
-                <input type="time" required />
+                <input type="time" required formControlName="depaturetime">
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Depature Time</label>
               </div>
               <div class="input-group">
-                <input type="text" required />
+                <input type="text" required formControlName="source">
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Source</label>
               </div>
-              <button class="btn  b1 float-end" type="submit">Add</button>
+              <button class="btn  b1 float-end" type="submit" (click)="flight()">Add</button>
+              
         </div>
         <div class="col-2">
+          
             <div class="input-group">
-                <input type="date" required />
+                <input type="date" required formControlName="arrivaldate" >
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Arrival Date</label>
               </div>
         
               <div class="input-group">
-                <input type="number" required />
+                <input type="number" required formControlName="seats">
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>No.of seats</label>
               </div>
               <div class="input-group">
-                <input type="text" required />
+                <input type="text" required formControlName="destination">
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Destination</label>
               </div>
+             
+              
         </div>
         <div class="col-2">
+          
             <div class="input-group">
-                <input type="time" required />
+                <input type="time" required formControlName="arrivaltime">
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Arrival Time</label>
               </div>
         
               <div class="input-group">
-                <input type="number" required />
+                <input type="number" required formControlName="amount">
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Amount per seat</label>
               </div>
+              
         </div>
         <div class="col-1"></div>
     <div class="col-1  text-end mt-3">
        
     </div>
+        </div>
+      </form>
+
     </div>
   </div>
 </div>

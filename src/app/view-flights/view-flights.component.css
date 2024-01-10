@@ -1,17 +1,15 @@
-.r1{
-    background-color:rgb(139,131,177);
-    color: white;
-    width: 100%;
+p{
+    font-size: 23px;
+    color: rgb(139,131,177);
 }
 .head{
     color: purple;
 }
-
-span{
-    visibility: hidden;
+.car{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-i:hover  span{
-
-    visibility: visible;
+.icon{
+    
+    
+    font-size: 35px;
 }

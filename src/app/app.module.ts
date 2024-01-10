@@ -23,6 +23,10 @@ import { UserPaymentsComponent } from './user-payments/user-payments.component';
 import { SearchflightsComponent } from './searchflights/searchflights.component';
 import { UserCancelregComponent } from './user-cancelreg/user-cancelreg.component';
 import { UserChangepasswordComponent } from './user-changepassword/user-changepassword.component';
+import { AdminComponent } from './admin/admin.component';
+import { HomeComponent } from './home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,11 +50,16 @@ import { UserChangepasswordComponent } from './user-changepassword/user-changepa
     UserPaymentsComponent,
     SearchflightsComponent,
     UserCancelregComponent,
-    UserChangepasswordComponent
+    UserChangepasswordComponent,
+    AdminComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

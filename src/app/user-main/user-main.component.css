@@ -18,12 +18,12 @@ i:hover  span{
     visibility: visible;
 }
 .con{
-    background-color: rgb(85, 78, 78) ;
+    background-color:rgb(163, 157, 157) ;
     height: 1000px;
 }
 .col{
     background-color: white;
-    height: 850px;
+    height: 890px;
 }
 .bi{
     float: left;
