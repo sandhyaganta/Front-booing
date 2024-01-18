@@ -8,6 +8,7 @@
         <div class="card mt-5 car rounded">
           
           <div class="card-body">
+            <form [formGroup]="Loginform">
             <div class="row">
               <div class="col-6">
                 <img
@@ -22,23 +23,24 @@
                   <br />
   
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+                    <input type="text" class="form-control" id="floatingPassword" placeholder="username" formControlName="username">
                     <label for="floatingPassword">Password</label>
                   </div><br />
                   <h4 class="mt-5 head">Password:</h4>
                   <br />
                   <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
                     <label for="floatingPassword">Password</label>
                   </div><br /><br />
                   
                   <div class="text-center">
-                    <button class="btn lb" type="submit" routerLink="/user2">Login</button>
+                    <button class="btn lb" type="submit" (click)="user()">Login</button>
                     <!-- <p class="p1 mt-2">New User????<span  class="sp2"  routerLink="/user">Registration here</span></p> -->
                   </div>
                 
               </div>
             </div>
+            </form>
           </div>
         </div>
       </div>

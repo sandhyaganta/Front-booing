@@ -1,10 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UserServiceService } from '../user-service.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-login',
   templateUrl: './user-login.component.html',
   styleUrls: ['./user-login.component.css']
 })
-export class UserLoginComponent {
+export class UserLoginComponent implements OnInit {
+  Loginform!:FormGroup;
+  constructor(private api:UserServiceService,private form:FormBuilder, private route:Router){}
+ngOnInit(): void {
+  this.Loginform=this.form.group({
+    username:[''],
+    password:['']
 
+  })
+  
+  
+}
+user(){
+  console.log("userlogin successfuly",this.Loginform.value)
+  this.api.userLogin(this.Loginform.value).subscribe((res:any)=>{
+    if(res){
+      alert("login successfuly")
+      this.route.navigate(["/user2"])
+    }
+    else{
+      alert("login failed")
+    }
+  })
+}
 }
