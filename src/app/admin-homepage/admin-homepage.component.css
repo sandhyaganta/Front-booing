@@ -10,7 +10,7 @@
 }
 .bi{
     float: left;
-    font-size: 18px;
+    font-size: 12px;
     
 }
 span{
@@ -23,7 +23,7 @@ i:hover  span{
 }
 
 .con{
-    background-color: rgb(24, 21, 21) ;
+    background-color: rgb(163,157,157) ;
     height: 920px;
 }
 .col{
