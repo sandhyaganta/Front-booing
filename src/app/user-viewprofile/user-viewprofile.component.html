@@ -3,37 +3,129 @@
 
   <div class="row">
     <h3 class="text-center mt-5 head">User Registration Form</h3>
+    <div class="row mt-3" >
+    <div class="col-sm-5" >
+              <div class="card rounded car">
+          <div class="card-body">
+            <div class="container fw-bold">
+              <div class="row">
+                
+                  <p>id: <span class="text-black">{{ user._id }}</span></p>
+                  <p>firstname: <span class="text-black">{{ user.firstname }}</span></p>
+                  <p>lastname: <span class="text-black">{{ user.lastname }}</span></p>
+                  <p>username: <span class="text-black">{{ user.username }}</span></p>
+                  <p>email: <span class="text-black">{{ user.email }}</span></p>
+                  <p>mobileno: <span class="text-black">{{ user.mobileno }}</span></p>
+                  <p>address: <span class="text-black">{{ user.address }}</span></p>
+                  
+                  <!-- Button trigger modal -->
+<button type="button" class="btn  mt-3 m-auto bb" data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="useredit(user)">
+  update
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="updateForm">
+        <div class="row">
+          <div class="col">
+            <label
+            >firstname:<span
+              ><input
+                type="text"
+                class="form-control"
+                width="50"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg"
+                formControlName="firstname"
+              /> </span
+          ></label>
+          <label
+          >lastname::<span
+            ><input
+              type="text"
+              class="form-control"
+              width="50"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-lg"
+              formControlName="lastname"
+            /> </span
+        ></label>
+        <label
+        >username:<span
+          ><input
+            type="text"
+            class="form-control"
+            width="50"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-lg"
+            formControlName="username"
+          /> </span
+      ></label>
+      <label
+      >email:<span
+        ><input
+          type="text"
+          class="form-control"
+          width="50"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-lg"
+          formControlName="email"
+        /> </span
+    ></label>
+    <label
+    >mobileno:<span
+      ><input
+        type="text"
+        class="form-control"
+        width="50"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+        formControlName="mobileno"
+      /> </span
+  ></label>
+  <label
+  >address:<span
+    ><input
+      type="text"
+      class="form-control"
+      width="50"
+      aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-lg"
+      formControlName="address"
+    /> </span
+></label>
+
+          </div>
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"(click)="update()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+                
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        
+      </div>
+
+    </div>
     
         
-        <div class="col-3 mt-5"></div>
-      
-        <div class="col-2 mt-3 ">
-          <label class="label ms-1">Firstname</label><br />
-          <input class="form-control" type="text" placeholder="" aria-label="default input example"><br /><br />
-          <label class="label">Email</label><br />
-          <input class="form-control" type="text" placeholder="" aria-label="default input example"><br /><br />
-          <label class="label ms-5">Address</label><br />
-          <input class="form-control" type="text" placeholder="" aria-label="default input example">
-        </div>
-        <div class="col-2 mt-3">
-          <label class="label">Lastname</label><br />
-          <input class="form-control" type="text" placeholder="" aria-label="default input example"><br /><br />
-          <label class="label">Phoneno</label><br />
-          <input class="form-control" type="text" placeholder="" aria-label="default input example"><br /><br /><br><br><br>
-          <button class="btn mb-5 bt text-end" type="submit">update</button>
-        </div>
-        <div class="col-2 mt-3">
-            <label class="label">Username</label><br />
-            <input class="form-control" type="text" placeholder="" aria-label="default input example"><br /><br />
-            <label class="label">Gender</label><br>
-            <input type="radio" name="Gender" value="male">male<br>
-            <input type="radio" name="Gender" value="female">female
-        </div>
-        <div class="col-2"></div>
-    
-    
-    <div class="col-1 mt-3">
-      
-    </div>
+       
   </div>
 </div>

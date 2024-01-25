@@ -23,13 +23,21 @@ ngOnInit(): void {
 user(){
   console.log("userlogin successfuly",this.Loginform.value)
   this.api.userLogin(this.Loginform.value).subscribe((res:any)=>{
+    console.log(res,'res');
+    localStorage.setItem("token",res.token)
+    localStorage.setItem("id",res._id)
+    localStorage.setItem("username",res.username)
     if(res){
+      
+      
+      
       alert("login successfuly")
       this.route.navigate(["/user2"])
     }
     else{
       alert("login failed")
     }
+    
   })
 }
 }

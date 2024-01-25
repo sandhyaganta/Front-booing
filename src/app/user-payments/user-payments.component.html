@@ -14,25 +14,25 @@
                 />
                         </div>
                         <div class="col-6">
-                            <Form>
+                            <Form [formGroup]="Registrationform">
                                 <div class="form-floating ">
-                                    <input type="text" class="form-control"  name="Username" placeholder="Username">
+                                    <input type="text" class="form-control"  name="Username" placeholder="Username" formControlName="username" >
                                     <label for="code4">Username</label>
                                 </div><br>
                                 <div class="form-floating ">
-                                    <input type="text" class="form-control"  name="Bookid" placeholder="Bookid">
+                                    <input type="text" class="form-control"  name="Bookid" placeholder="Bookid" formControlName="bookid" >
                                     <label for="code4">Bookid</label>
                                 </div><br>
                                 <div class="form-floating ">
-                                    <input type="text" class="form-control"  name="Cardtype" placeholder="Cardtype">
+                                    <input type="text" class="form-control"  name="Cardtype" placeholder="Cardtype" formControlName="cardtype">
                                     <label for="code4">Cardtype</label>
                                 </div><br>
                                 <div class="form-floating ">
-                                    <input type="text" class="form-control"  name="Cvvnumber" placeholder="Cvvnumber">
+                                    <input type="text" class="form-control"  name="Cvvnumber" placeholder="Cvvnumber" formControlName="cvvnumber">
                                     <label for="code4">Cvvnumber</label>
                                 </div><br>
                                 <div class="form-floating ">
-                                    <input type="text" class="form-control" name="Auccountnumber" placeholder="Auccountnumber">
+                                    <input type="text" class="form-control" name="Auccountnumber" placeholder="Auccountnumber" formControlName="auccountnumber">
                                     <label for="code4">Auccountnumber</label>
                                 </div><br><br>
                                 <div class="text-center">

@@ -14,6 +14,7 @@ export class ViewFlightsComponent {
   ngOnInit(): void {
     this.api.getFlights().subscribe((res: any) => {
       this.flights=res;
+      localStorage.setItem("id",res._id)
       console.log(this.flights);
     });
 

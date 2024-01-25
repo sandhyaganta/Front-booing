@@ -46,6 +46,7 @@
       </div>
     </div>
   </div> -->
+  <form [formGroup]="Registrationform">
   <div class="row mt-5">
     <div class="col-2">
       <img
@@ -59,21 +60,93 @@
     <div class="col-2 ">
       
       <label class="label">Source:</label>
-      <input type="text" class="form-control p-2" width="50" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      <input type="text" class="form-control p-2" width="50" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" formControlName="source">
     </div> 
     <div class="col-2"></div> 
      <div class="col-2" >
       <label class="label">Destination:</label>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" formControlName="destination">
       
     </div>
     <div class="col-2"></div>
     <div class="col-1">
       
-      <button class="btn text-center but" width="100%" type="submit">
+      <button class="btn text-center but" width="100%" type="submit" (click)="flight()">
         Search
       </button>
     </div>
   </div>
+  </form>
 
+
+</div>
+<div class="container-fluid">
+  <h3 class="text-center head pt-5"> Flights Details</h3>
+
+  <div class="row">
+    <div class="col-12">
+      <div *ngFor="let r of flight1">
+        <div class="card rounded car">
+          <div class="card-body">
+            <div class="container fw-bold">
+              <div class="row">
+                <div class="col-6">
+                  <p>
+                    id:<span class="text-black">{{ r._id }}</span>
+                  </p>
+                  <p>
+                    flightnumber:<span class="text-black">{{
+                      r.flightnumber
+                    }}</span>
+                  </p>
+                  <p>
+                    flightname:<span class="text-black">{{
+                      r.flightname
+                    }}</span>
+                  </p>
+                  <p>
+                    arrivaldate:<span class="text-black">{{
+                      r.arrivaldate
+                    }}</span>
+                  </p>
+                  <p>
+                    arrivaltime:<span class="text-black">{{
+                      r.arrivaltime
+                    }}</span>
+                  </p>
+                  <p>
+                    depaturedate:<span class="text-black">{{
+                      r.depaturedate
+                    }}</span>
+                  </p>
+                </div>
+                <div class="col-6">
+                  <p>
+                    depaturetime:<span class="text-black">{{
+                      r.depaturetime
+                    }}</span>
+                  </p>
+                  <p>
+                    seats:<span class="text-black">{{ r.seats }}</span>
+                  </p>
+                  <p>
+                    amount for seat:<span class="text-black">{{ r.amount }}</span>
+                  </p>
+                  <p>
+                    source:<span class="text-black">{{ r.source }}</span>
+                  </p>
+                  <p>
+                    destination:<span class="text-black">{{
+                      r.destination
+                    }}</span>
+                  </p>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -21,6 +21,11 @@ export class AdminLoginComponent implements OnInit {
    }
    admin(){
     this.api.adminLogin(this.Loginform.value).subscribe((res:any)=>{
+      console.log(res);
+      console.log(res.token);
+      localStorage.setItem("token",res.token)
+      
+      
       if(res){
         alert("login successfuly")
         this.route.navigate(["/admin1"])

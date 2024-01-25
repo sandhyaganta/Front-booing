@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
-import{HttpClient} from"@angular/common/http";
+import{HttpClient, HttpHeaders} from"@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
+  jwttoken():any{
+    const header={
+      headers:new HttpHeaders({'Authorization':'Bearer '+localStorage.getItem('token')})
+    };
+    return header;
+  }
   private getUrl='http://localhost:5000';
 
   constructor(private http:HttpClient) { }
@@ -15,15 +21,21 @@ export class ServiceService {
     return this.http.post("http://localhost:5000/admin/login",data);
   }
   addFlight(data:any){
-    return this.http.post("http://localhost:5000/flight/create",data);
+    return this.http.post("http://localhost:5000/flight/creates",data);
   }
   getFlights(){
-    return this.http.get("http://localhost:5000/flight/get/flight");
+    return this.http.get("http://localhost:5000/flight/get/flight",this.jwttoken());
   }
   deleteFlight(id:any){
      return this.http.delete("http://localhost:5000/flight/deleteById/"+id);
   }
   updatedFlight(data:any){
     return this.http.put("http://localhost:5000/flight/updateById/"+data.id,data);
+  }
+  getallusers(){
+    return this.http.get("http://localhost:5000/user/get/users");
+  }
+  getflight1(id:any){
+    return this.http.get("http://localhost:5000/flight/getById"+id);
   }
 }

@@ -1,33 +1,30 @@
 <div class="container-fluid  ">
     
         <h3 class="text-center head pt-5">Manager view User</h3>
-
-    <div class="row ">
-        <div class="col-12">
-            <table class="table table-striped">
-                
-                <thead>
-                  <tr>
-                    <th scope="col">S.no</th>
-                    <th scope="col">FristName</th>
-                    <th scope="col">LastName</th>
-                    <th scope="col">UserName</th>
-                    <th scope="col">Emailid</th>
-                    <th scope="col">Gender</th>
-                    <th scope="col">PhoneNumber</th>
-                    <th scope="col">Address</th>
-                    
-                  </tr>
-                </thead>
-                <tbody>
+        <div class="row">
+        <div class="col-sm-5">
+          <div *ngFor="let r of users">
+            <div class="card rounded car">
+              <div class="card-body">
+                <div class="container fw-bold">
+                <div class="row">
+                  <p>id: <span class="text-black">{{ r._id }}</span></p>
+                  <p>firstname: <span class="text-black">{{ r.firstname }}</span></p>
+                  <p>lastname: <span class="text-black">{{ r.lastname }}</span></p>
+                  <p>username: <span class="text-black">{{ r.username }}</span></p>
+                  <p>email: <span class="text-black">{{ r.email }}</span></p>
+                  <p>mobileno: <span class="text-black">{{ r.mobileno }}</span></p>
+                  <p>address: <span class="text-black">{{ r.address }}</span></p>
                   
-                </tbody>
-              
-          </table>
+                 
+                </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
+        </div>
+
     
-    </div>
-
-
-
 </div>
