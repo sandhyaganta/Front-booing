@@ -21,21 +21,21 @@ export class ServiceService {
     return this.http.post("http://localhost:5000/admin/login",data);
   }
   addFlight(data:any){
-    return this.http.post("http://localhost:5000/flight/creates",data);
+    return this.http.post("http://localhost:5000/flight/creates",data,this.jwttoken());
   }
   getFlights(){
     return this.http.get("http://localhost:5000/flight/get/flight",this.jwttoken());
   }
   deleteFlight(id:any){
-     return this.http.delete("http://localhost:5000/flight/deleteById/"+id);
+     return this.http.delete("http://localhost:5000/flight/deleteById/"+id,this.jwttoken());
   }
   updatedFlight(data:any){
-    return this.http.put("http://localhost:5000/flight/updateById/"+data.id,data);
+    return this.http.put("http://localhost:5000/flight/updateById/"+data.id,data,this.jwttoken());
   }
   getallusers(){
-    return this.http.get("http://localhost:5000/user/get/users");
+    return this.http.get("http://localhost:5000/user/get/users",this.jwttoken());
   }
   getflight1(id:any){
-    return this.http.get("http://localhost:5000/flight/getById"+id);
+    return this.http.get("http://localhost:5000/flight/getById"+id,this.jwttoken());
   }
 }

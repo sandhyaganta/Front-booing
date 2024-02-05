@@ -3,237 +3,218 @@
 
   <div class="row">
     <div class="col-12 mt-3">
-    <div *ngFor="let r of flights">
-      <div class="card rounded car">
-        
-            <div class="card-body">
-                <div class="container fw-bold">
-                <div class="row">
-                    <div class="col-sm-6">
-                      <p>id:<span class="text-black">{{r._id}}</span></p>
-                        <p>Flightnumber:<span class="text-black">{{r.flightnumber}}</span></p>
-                        <p>Flightname:<span class="text-black">{{r.flightname}}</span></p>
-                        <p>Arrivaldate:<span class="text-black">{{r.arrivaldate}}</span></p>
-                        <p>Arrivaltime:<span class="text-black">{{r.arrivaltime}}</span></p>
-                        <p>Depaturetime:<span class="text-black">{{r.depaturetime}}</span></p>
+      <div *ngFor="let r of flights">
+        <div class="card rounded car">
+          <div class="card-body">
+            <div class="container fw-bold">
+              <div class="row">
+                <div class="col-sm-6">
+                  <p>
+                    id:<span class="text-black">{{ r._id }}</span>
+                  </p>
+                  <p>
+                    Flightnumber:<span class="text-black">{{
+                      r.flightnumber
+                    }}</span>
+                  </p>
+                  <p>
+                    Flightname:<span class="text-black">{{
+                      r.flightname
+                    }}</span>
+                  </p>
+                  <p>
+                    Arrivaldate:<span class="text-black">{{
+                      r.arrivaldate
+                    }}</span>
+                  </p>
+                  <p>
+                    Arrivaltime:<span class="text-black">{{
+                      r.arrivaltime
+                    }}</span>
+                  </p>
+                  <p>
+                    Depaturetime:<span class="text-black">{{
+                      r.depaturetime
+                    }}</span>
+                  </p>
+                </div>
+                <div class="col-sm-6">
+                  <p>
+                    Depaturedate:<span class="text-black">{{
+                      r.depaturetime
+                    }}</span>
+                  </p>
+                  <p>
+                    seats:<span class="text-black">{{ r.seats }}</span>
+                  </p>
+                  <p>
+                    Amount:<span class="text-black">{{ r.amount }}</span>
+                  </p>
+                  <p>
+                    Sourace:<span class="text-black">{{ r.source }}</span>
+                  </p>
+                  <p>
+                    Destination:<span class="text-black">{{
+                      r.destination
+                    }}</span>
+                  </p>
+                </div>
 
-
-                    </div>
-                    <div class="col-sm-6">
-                        <p>Depaturedate:<span class="text-black">{{r.depaturetime}}</span></p>
-                        <p>seats:<span class="text-black">{{r.seats}}</span></p>
-                        <p>Amount:<span class="text-black">{{r.amount}}</span></p>
-                        <p>Sourace:<span class="text-black">{{r.source}}</span></p>
-                        <p>Destination:<span class="text-black">{{r.destination}}</span></p>
-                    </div>
-                    
-                    <!-- Button trigger modal -->
-<button type="button" class="btn  bb m-auto mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="bookflight(r) ">
-  Book A Flight
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Flight Booking</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        
-          <form [formGroup]="Registrationform">
-          <div class="row">
-            <div class="col-4">
-              <label
-                >Flight Number:<span
-                  ><input
-                    type="text"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="flightnumber"
-                  /> </span
-              ></label>
-              <label
-                >Flight Name:<span
-                  ><input
-                    type="text"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="flightname"
-                  /> </span
-              ></label>
-              <label
-                >Arrival Date:<span
-                  ><input
-                    type="text"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="arrivaldate"
-                  /> </span
-              ></label>
-              <label
-                >Arrival Time:<span
-                  ><input
-                    type="text"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="arrivaltime"
-                  /> </span
-              ></label>
-              <label
-                >Depature Date:<span
-                  ><input
-                    type="text"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="depaturedate"
-                  /> </span
-              ></label>
-            </div>
-            <div class="col-4">
-              <label
-                >Depature Time:<span
-                  ><input
-                    type="text"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="depaturetime"
-                  /> </span
-              ></label>
-              <label
-                >Amount for Seat:<span
-                  ><input
-                    type="text"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="seats"
-                  /> </span
-              ></label>
-              <label
-                >Amount:<span
-                  ><input
-                    type="text"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="amount"
-                  /> </span
-              ></label>
-              <label
-                >Source:<span
-                  ><input
-                    type="text"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="source"
-                  /> </span
-              ></label>
-              <label
-                >Destination:<span
-                  ><input
-                    type="text"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="destination"
-                  /> </span
-              ></label>
-            </div>
-            <div class="col-4">
-              <label
-                >Booking id:<span
-                  ><input
-                    type="text"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="bookingid"
-                  /> </span
-              ></label>
-              <label
-                >Booking date:<span
-                  ><input
-                    type="date"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="bookingdate"
-                  /> </span
-              ></label>
-              <label
-                >Username:<span
-                  ><input
-                    type="text"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="username"
-                  /> </span
-              ></label>
-              <label
-                >No of seats:<span
-                  ><input
-                    type="text"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="noofseats" (change)="calculate($event)"
-                  /> </span
-              ></label>
-              <label
-                >Total amount:<span
-                  ><input
-                    type="text"
-                    class="form-control"
-                    width="50"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg"
-                    formControlName="totalamount"
-                  /> </span
-              ></label>
-
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn bb m-auto mt-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  (click)="bookflight(r)"
+                >
+                  Book A Flight
+                </button>
+              </div>
             </div>
           </div>
-        </form>
-     
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" (click)="book()">Booking</button>
-      </div>
-    </div>
-  </div>
-</div>
-                </div>
-                </div>
-            
         </div>
       </div>
-    </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Flight Booking
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="Registrationform" *ngIf="filghtDetails">
+                <div class="row">
+                  <div class="col-4">
+                    <label
+                      >Flight Number:<span
+                        >{{ filghtDetails.flightnumber }}
+                      </span></label
+                    >
+                    <label
+                      >Flight Name:<span
+                        >{{ filghtDetails.flightname }}
+                      </span></label
+                    >
+                    <label
+                      >Arrival Date:<span
+                        >{{ filghtDetails.arrivaldate }}
+                      </span></label
+                    >
+                    <label
+                      >Arrival Time:<span
+                        >{{ filghtDetails.arrivaltime }}
+                      </span></label
+                    >
+                    <label
+                      >Depature Date:<span
+                        >{{ filghtDetails.depaturedate }}
+                      </span></label
+                    >
+                  </div>
+                  <div class="col-4">
+                    <label
+                      >Depature Time:<span
+                        >{{ filghtDetails.depaturetime }}
+                      </span></label
+                    >
+                    <label
+                      >Amount for Seat:<span
+                        >{{ filghtDetails.seats }}
+                      </span></label
+                    >
+                    <label
+                      >Amount:<span>{{ filghtDetails.amount }} </span></label
+                    >
+                    <label
+                      >Source:<span>{{ filghtDetails.source }} </span></label
+                    >
+                    <label
+                      >Destination:<span
+                        >{{ filghtDetails.destination }}
+                      </span></label
+                    >
+                  </div>
+                  <div class="col-4">
+                    <label
+                      >Booking id:<span
+                        ><input
+                          type="text"
+                          class="form-control"
+                          width="50"
+                          aria-label="Sizing example input"
+                          aria-describedby="inputGroup-sizing-lg"
+                          formControlName="bookingid"
+                        /> </span
+                    ></label>
+                    <label
+                      >Booking date:<span
+                        ><input
+                          type="date"
+                          class="form-control"
+                          width="50"
+                          aria-label="Sizing example input"
+                          aria-describedby="inputGroup-sizing-lg"
+                          formControlName="bookingdate"
+                        /> </span
+                    ></label>
+                    <label
+                      >No of seats:<span
+                        ><input
+                          type="text"
+                          class="form-control"
+                          width="50"
+                          aria-label="Sizing example input"
+                          aria-describedby="inputGroup-sizing-lg"
+                          formControlName="noofseats"
+                          (change)="calculate($event)"
+                        /> </span
+                    ></label>
+                    <label
+                      >Total amount:<span
+                        ><input
+                          type="text"
+                          class="form-control"
+                          width="50"
+                          aria-label="Sizing example input"
+                          aria-describedby="inputGroup-sizing-lg"
+                          formControlName="totalamount"
+                        /> </span
+                    ></label>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary" (click)="book()">
+                Booking
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

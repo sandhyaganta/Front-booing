@@ -3,35 +3,40 @@
 
   <div class="row">
     <div class="col-12">
-      <div>
+      <div *ngFor="let r of alluser">
         <div class="card car fw-bold">
           <div class="card-body">
               <div class="container">
                   <div class="row">
-                      <!-- <div class="col-sm-4">
-                          <p>id:<span class="text-black"></span></p>
-                          <p>Flightnumber:<span class="text-black"></span></p>
-                          <p>Flightname:<span class="text-black"></span></p>
-                          <p>Arrivaldate:<span class="text-black"></span></p>
-                          <p>Arrivaltime:<span class="text-black"></span></p>
+                      <div class="col-sm-4">
+                          <p>id:<span class="text-black">{{ r.flightdata._id }}</span></p>
+                          <p>Flightnumber:<span class="text-black">{{ r.flightdata.flightnumber }}</span></p>
+                          <p>Flightname:<span class="text-black">{{ r.flightdata.flightname }}</span></p>
+                          <p>Arrivaldate:<span class="text-black">{{ r.flightdata.arrivaldate }}</span></p>
+                          <p>Arrivaltime:<span class="text-black">{{ r.flightdata.arrivaltime }}</span></p>
                       </div>
                       <div class="col-sm-4">
-                          <p>DepatureTime:<span class="text-black"></span></p>
-            <p>Depaturedate:<span class="text-black"></span></p>
-            <p>Seats:<span class="text-black"></span></p>
-            <p>Amont<span class="text-black"></span></p>
-            <p>Source:<span class="text-black"></span></p>
+                          <p>DepatureTime:<span class="text-black">{{ r.flightdata.depaturetime }}</span></p>
+            <p>Depaturedate:<span class="text-black">{{ r.flightdata.depaturedate }}</span></p>
+            <p>Seats:<span class="text-black">{{ r.flightdata.seats }}</span></p>
+            <p>Amont<span class="text-black">{{ r.flightdata.amount }}</span></p>
+            <p>Source:<span class="text-black">{{ r.flightdata.source }}</span></p>
            
                       </div>
                       <div class="col-sm-4">
-                          <p>Destination:<span class="text-black"></span></p>
-            <p>Bookingid:<span class="text-black">{{r.id}}</span></p>
-            <p>Bookingdate:<span class="text-black">{{r.bookingdate}}</span></p>
-            <p>username:<span class="text-black">{{r.username}}</span></p>
-            <p>noofseats:<span class="text-black">{{r.noofseats}}</span></p>
-            <p>Totalamount:<span class="text-black">{{r.totalamount}}</span></p>
-                      </div> -->
-                      <button class="btn bb m-auto mt-3" type="submit" routerLink="user8">Cancalpayments</button>
+                          <p>Destination:<span class="text-black">{{ r.flightdata.destination }}</span></p>
+            <p>Bookingid:<span class="text-black">{{r.bookdata.bookingid}}</span></p>
+            <p>Bookingdate:<span class="text-black">{{r.bookdata.bookingdate}}</span></p>
+            <p>username:<span class="text-black">{{ r.bookdata.userid}}</span></p>
+            <p>noofseats:<span class="text-black">{{r.bookdata.noofseats}}</span></p>
+            <p>Totalamount:<span class="text-black">{{r.bookdata.totalamount}}</span></p>
+            <p>
+              Status:<span class="text-black" *ngIf="r.bookdata.status == 2"
+                >Canceled</span
+              >
+            </p>
+                      </div>
+                     
                   </div>
               </div>
           </div>

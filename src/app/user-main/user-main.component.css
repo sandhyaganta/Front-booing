@@ -1,14 +1,14 @@
 .r1{
-    background-color:black;
+    background-color:rgb(77, 110, 116);
     color: white;
     width: 100%;
     
 }
 .head{
-    color:white ;
+    color:purple;
     
 }
-
+/* 
 span{
     visibility: hidden;
     font-size: 12px;
@@ -17,14 +17,17 @@ span{
 i:hover  span{
 
     visibility: visible;
+} */
+span{
+    font-size: 14px;
 }
 .con{
-    background-color:rgb(163, 157, 157) ;
+    background-color:#E5E4E2 ;
 
 }
 .col{
     background-color: white;
-    width: 1215px;
+    
 }
 .bi{
     float: left;

@@ -16,6 +16,7 @@ export class UserViewflightComponent {
   book1: any;
   bi: any;
   Registrationform!: FormGroup;
+  filghtDetails: any;
   constructor(
     private api: UserServiceService,
     private form: FormBuilder,
@@ -25,50 +26,28 @@ export class UserViewflightComponent {
     this.api.getFlights().subscribe((res: any) => {
       this.flights = res;
       console.log(this.flights);
-
-     
-      
     });
 
     this.Registrationform = this.form.group({
-      flightnumber: [''],
-      flightname: [''],
-      arrivaldate: [''],
-      arrivaltime: [''],
-      depaturedate: [''],
-      depaturetime: [''],
-      seats: [''],
-      amount: [''],
-      source: [''],
-      destination: [''],
-      id: [''],
+      userid: [''],
+      flightid: [''],
       bookingid: [''],
       bookingdate: [''],
-      username: [''],
       noofseats: [''],
       totalamount: [''],
+      status: 1,
     });
   }
   bookflight(d: any) {
-    let username = localStorage.getItem('username');
+    this.filghtDetails = d;
+    let userid = localStorage.getItem('id');
     const book = Math.floor(Math.random() * 1000);
     this.bi = 'BKI' + book;
     console.log(this.bi);
     this.Registrationform.patchValue({
-      flightnumber: d.flightnumber,
-      flightname: d.flightname,
-      arrivaldate: d.arrivaldate,
-      arrivaltime: d.arrivaltime,
-      depaturedate: d.depaturedate,
-      depaturetime: d.depaturetime,
-      seats: d.seats,
-      amount: d.amount,
-      source: d.source,
-      destination: d.destination,
-      id: d._id,
+      userid: userid,
+      flightid: d._id,
       bookingid: this.bi,
-      username: username,
-      noofseats: '',
       totalamount: this.totalAmount,
     });
     this.fp = d.amount;
@@ -86,17 +65,14 @@ export class UserViewflightComponent {
       totalamount: this.totalAmount,
     });
   }
-  
-  book() {
-    let data={
-    ...this.Registrationform.value,
-    totalamount: this.totalAmount,
 
-    }
+  book() {
+    let data = {
+      ...this.Registrationform.value,
+      totalamount: this.totalAmount,
+    };
     console.log(data, 'registration values');
     this.api.booking(data).subscribe((res: any) => {
-      localStorage.setItem('bi', res.bi);
-
       this.book1 = res;
       console.log(this.book1, 'book');
     });

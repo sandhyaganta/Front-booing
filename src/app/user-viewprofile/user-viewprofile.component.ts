@@ -17,8 +17,8 @@ ngOnInit():void{
   console.log(u, "id");
   
   this.api.getuser(u).subscribe((res:any)=>{
-    this.user=res;
-    console.log(this.user);
+    this.user = res;
+    console.log(this.user,'user');
     
   })
   this.updateForm=this.form.group({

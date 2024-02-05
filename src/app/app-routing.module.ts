@@ -44,7 +44,7 @@ const routes: Routes = [
     {path:'',component:HomeComponent},
     {path:'home1',component:HomeComponent},
     {path:'user4',component:UserViewprofileComponent},
-  {path:'user5',component:UserBookflightComponent},
+  
   {path:'user6',component:UserViewflightComponent},
   {path:'user7',component:UserViewbookingComponent},
   {path:'user8',component:UserPaymentsComponent},
